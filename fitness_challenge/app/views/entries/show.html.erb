@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @entry.user_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @entry.date %>
+</p>
+
+<p>
+  <strong>Measurements:</strong>
+  <%= @entry.measurements %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @entry.weight %>
+</p>
+
+<p>
+  <strong>Calories:</strong>
+  <%= @entry.calories %>
+</p>
+
+<p>
+  <strong>Workout:</strong>
+  <%= @entry.workout %>
+</p>
+
+<p>
+  <strong>Energy:</strong>
+  <%= @entry.energy %>
+</p>
+
+<p>
+  <strong>Sleep:</strong>
+  <%= @entry.sleep %>
+</p>
+
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Back', entries_path %>
