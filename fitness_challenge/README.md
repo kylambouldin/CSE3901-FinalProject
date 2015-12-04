@@ -1,16 +1,16 @@
 ##Models
 * User
-  *name
-  *email 
+  - name
+  - email 
 * Entry
-  *user
-  *date
-  *measurements
-  *weight
-  *calories
-  *workout
-  *energy
-  *sleep
+  - user
+  - date
+  - measurements
+  - weight
+  - calories
+  - workout
+  - energy
+  - sleep
 
 ##Views
 * /layouts - application.html.erb & _header.html.erb
