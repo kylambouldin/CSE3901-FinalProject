@@ -15,8 +15,8 @@
 ##Views
 * /layouts - application.html.erb & _header.html.erb
 * /home - index.html.erl
-* /sessions - new.html.erb
-* /users - new.html.erb
+* /sessions - new.html.erb (login page)
+* /users - new.html.erb (sign up page)
 
 ##Controllers
 * application_controller
