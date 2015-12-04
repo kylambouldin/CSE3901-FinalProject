@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+# Use devise for login
+gem 'devise'
 # Use Foundation framework
 gem 'foundation-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-
-  get 'users/new'
+  devise_for :users
 
   resources :entries
   resources :entries
