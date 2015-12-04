@@ -16,10 +16,26 @@
 
  */
 
+/* HOME PAGE CSS */
 .homepage, .login-page h1 {
+  text-align: center;
+}
+
+.homepage .panel {
+  padding: 50px 0px;
+}
+
+#signup-button {
+  color: white;
+}
+
+/* LOGIN PAGE CSS */
+
+.login-page h1 {
   text-align: center;
 }
 
 .login-page form {
   margin: 0px auto;
 }
+
