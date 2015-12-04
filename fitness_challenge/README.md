@@ -20,7 +20,7 @@
 
 ##Controllers
 * application_controller
-*home_controller
+* home_controller
 * entries_controller
 * sessions_controller
 * users_controller
