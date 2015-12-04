@@ -16,6 +16,10 @@
 
  */
 
-.homepage {
+.homepage, .login-page h1 {
   text-align: center;
+}
+
+.login-page form {
+  margin: 0px auto;
 }
