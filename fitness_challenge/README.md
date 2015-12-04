@@ -1,7 +1,8 @@
 ##Models
-* User
+* User (created with devise)
   - name
   - email 
+  - password
 * Entry
   - user
   - date
@@ -15,12 +16,9 @@
 ##Views
 * /layouts - application.html.erb & _header.html.erb
 * /home - index.html.erl
-* /sessions - new.html.erb (login page)
-* /users - new.html.erb (sign up page)
+* /users (created with devise)
 
 ##Controllers
 * application_controller
 * home_controller
 * entries_controller
-* sessions_controller
-* users_controller
