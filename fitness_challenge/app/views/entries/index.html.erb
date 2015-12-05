@@ -20,7 +20,7 @@
   </thead>
 
   <tbody>
-    <% @entries.each do |entry| %>
+    <% current_user.entries.each do |entry| %>
       <tr>
         <td><%= entry.user_id %></td>
         <td><%= entry.date %></td>
