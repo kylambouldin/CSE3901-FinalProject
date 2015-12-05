@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Metric:</strong>
+  <%= @goal.metric %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @goal.value %>
+</p>
+
+<p>
+  <strong>By date:</strong>
+  <%= @goal.by_date %>
+</p>
+
+<p>
+  <strong>Date entered:</strong>
+  <%= @goal.date_entered %>
+</p>
+
+<%= link_to 'Edit', edit_goal_path(@goal) %> |
+<%= link_to 'Back', goals_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  metric: MyString
+  value: 1.5
+  by_date: 2015-12-05 00:07:20
+  date_entered: 2015-12-05 00:07:20
+
+two:
+  metric: MyString
+  value: 1.5
+  by_date: 2015-12-05 00:07:20
+  date_entered: 2015-12-05 00:07:20

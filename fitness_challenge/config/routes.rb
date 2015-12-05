@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  resources :goals
   devise_for :users
 
-  resources :entries
+  # route for user entries
   resources :entries
 
   # The priority is based upon order of creation: first created -> highest priority.
