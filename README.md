@@ -15,3 +15,4 @@
 ## Matt LeDonne
 
 ## Evan Clark
+* Linked user to their entries/goals
