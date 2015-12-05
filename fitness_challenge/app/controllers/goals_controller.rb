@@ -24,7 +24,8 @@ class GoalsController < ApplicationController
   # POST /goals
   # POST /goals.json
   def create
-    @goal = Goal.new(goal_params)
+	# attach goal to current user
+    @goal = current_user.goals.build(goal_params)
 
     respond_to do |format|
       if @goal.save

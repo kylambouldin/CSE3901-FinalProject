@@ -4,8 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  # associate with goals and entries
-  has_many :entries
-  has_many :goals
+  # associate with goals and entries, since they are dependent,
+  # destroy if user destroyed
+  has_many :entries, dependent: :destroy
+  has_many :goals, dependent: :destroy
 
 end
