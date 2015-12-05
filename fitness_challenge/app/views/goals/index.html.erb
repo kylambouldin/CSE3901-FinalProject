@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Goals</h1>
+<h1>Your Goals</h1>
+
+<%= link_to 'Add New Goal', new_goal_path %>
 
 <table>
   <thead>
@@ -20,9 +22,9 @@
         <td><%= goal.value %></td>
         <td><%= goal.by_date %></td>
         <td><%= goal.date_entered %></td>
-        <td><%= link_to 'Show', goal %></td>
+        <td><%= link_to 'View', goal %></td>
         <td><%= link_to 'Edit', edit_goal_path(goal) %></td>
-        <td><%= link_to 'Destroy', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +32,3 @@
 
 <br>
 
-<%= link_to 'New Goal', new_goal_path %>
