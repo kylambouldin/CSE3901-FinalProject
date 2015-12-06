@@ -6,13 +6,10 @@
       <%= link_to "Sign Up Now!", new_user_registration_path, class: "button large round", id:"signup-button" %>
     </div>
   <% else %>
-    <h3>Welcome, <strong><%= current_user.email %></strong></h3>
+    <h3>Welcome, <strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h3>
     <br/>
     <%= link_to "Your Entries", entries_path %>
 	<br/>
     <%= link_to "Your Goals", goals_path %>
-	<br/>
-    <%= link_to "Your Progress", goals_path %>
-	<br/>
   <% end %>
 </div>
