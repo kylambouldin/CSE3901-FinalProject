@@ -17,6 +17,9 @@
  */
 
 /* HOME PAGE CSS */
+body {
+  background-color: rgb(164,164,193); 
+}
 .homepage, .login-page h1 {
   text-align: center;
 }
@@ -39,6 +42,3 @@
   margin: 0px auto;
 }
 
-div.signup {
-	width:350px;
-}
