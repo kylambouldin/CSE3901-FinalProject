@@ -8,8 +8,9 @@
   <% else %>
     <h3>Welcome, <strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h3>
     <br/>
-    <%= link_to "Your Entries", entries_path %>
-	<br/>
-    <%= link_to "Your Goals", goals_path %>
+    <ul class="button-group">
+      <li><%= link_to "Your Entries", entries_path, class: "button large" %></li>
+      <li><%= link_to "Your Goals", goals_path, class: "button large"%></li>
+    </ul>
   <% end %>
 </div>

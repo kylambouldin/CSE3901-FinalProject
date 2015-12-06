@@ -1,3 +1,4 @@
+<div style= "padding: 5%;">
 <%= form_for(@entry) do |f| %>
   <% if @entry.errors.any? %>
     <div id="error_explanation">
@@ -11,52 +12,89 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
+  <form>
+  <div class="row">
+    <div class="medium-12 columns">
+      <label><%= f.label :date %>
+        <%= f.date_select :date %> 
+      </label>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :chest %><br>
-    <%= f.text_field :chest %>
-  </div>
-  <div class="field">
-    <%= f.label :waist %><br>
-    <%= f.text_field :waist %>
-  </div>
-  <div class="field">
-    <%= f.label :bicep %><br>
-    <%= f.text_field :bicep %>
-  </div>
-  <div class="field">
-    <%= f.label :thigh %><br>
-    <%= f.text_field :thigh %>
-  </div>
-  <div class="field">
-    <%= f.label :calf %><br>
-    <%= f.text_field :calf %>
-  </div>
+  <div class="row">
+    <div class="medium-12 columns">
+      <label><%= f.label :weight %>
+        <%= f.number_field :weight %>
+      </label>
+    </div>
+    <fieldset>
+     <legend>Measurements</legend>  
+     <div class="row">
+       <div class="medium-2 columns">
+         <label><%= f.label :chest %>
+           <%= f.number_field :chest, :step => 0.25 %>
+         </label>
+       </div>
+       <div class="medium-2 columns">
+         <label><%= f.label :wasit %>
+           <%= f.number_field :waist, :step => 0.25 %>
+         </label>
+       </div>
+       <div class="medium-2 columns">
+         <label><%= f.label :bicep %>
+           <%= f.number_field :bicep, :step => 0.25 %>
+         </label>
+       </div>
+       <div class="medium-2 columns">
+         <label><%= f.label :thigh %>
+           <%= f.number_field :thigh, :step => 0.25 %>
+         </label>
+       </div>
+       <div class="medium-2 columns end">
+         <label><%= f.label :calf %>
+           <%= f.number_field :calf, :step => 0.25 %>
+         </label>
+       </div>
+     </fieldset>
+     <fieldset>
+       <legend>Macros</legend>
+       <div class="row">
+         <div class="medium-4 columns">
+           <label><%= f.label :calories %>
+             <%= f.number_field :calories %>
+           </label>
+         </div>
+       </div>
+     </fieldset>
+     <div class="row">
+       <div class="medium-12 columns">
+         <label><%= f.label :workout %>
+           <%= f.text_area :workout %>
+         </label>
+       </div>
+     </div>
+     <fieldset>
+       <legend>Mood Ratings</legend>
+       <div class="row">
+         <div class="medium-12 columns">
+	   <label><%= f.label :energy %>
+	     <%= f.number_field :energy %>
+	   </label>
+	 </div>
+       </div>
+       <div class="row">
+         <div class="medium-12 columns">
+           <label><%= f.label :sleep %>
+             <%= f.number_field :sleep %>
+           </label>
+         </div>
+       </div>
 
-  <div class="field">
-    <%= f.label :weight %><br>
-    <%= f.text_field :weight %>
-  </div>
-  <div class="field">
-    <%= f.label :calories %><br>
-    <%= f.number_field :calories %>
-  </div>
-  <div class="field">
-    <%= f.label :workout %><br>
-    <%= f.text_field :workout %>
-  </div>
-  <div class="field">
-    <%= f.label :energy %><br>
-    <%= f.number_field :energy %>
-  </div>
-  <div class="field">
-    <%= f.label :sleep %><br>
-    <%= f.text_field :sleep %>
-  </div>
+     </fieldset>	
+    <div>
+  </form>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>
