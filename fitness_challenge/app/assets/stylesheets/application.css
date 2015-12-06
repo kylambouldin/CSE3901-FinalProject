@@ -36,11 +36,12 @@ body {
 
 
 /* Forms (Signup, Login) */
+
 .custom-form {
   width: 500px;
   margin: auto;
   padding: 0% 5%;
-  border: 3px solid black;
+  border: 2px solid black;
 }
 
 .custom-form h2 {
@@ -51,7 +52,12 @@ body {
   text-align: left;
 }
 
-.button-link {
-  color: red;
-  margin: auto;
+#entry-form {
+  width: 750px;
+}
+
+
+/* GOAL Page */
+.goal {
+  border: 2px solid black;
 }

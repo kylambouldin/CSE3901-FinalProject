@@ -11,23 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :metric %><br>
-    <%= f.text_field :metric %>
-  </div>
-  <div class="field">
-    <%= f.label :value %><br>
-    <%= f.text_field :value %>
-  </div>
-  <div class="field">
-    <%= f.label :by_date %><br>
-    <%= f.datetime_select :by_date %>
-  </div>
-  <div class="field">
-    <%= f.label :date_entered %><br>
-    <%= f.datetime_select :date_entered %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <form>
+    <div class="row">
+      <div class="medium-12 column">
+        <%= f.label :metric %>
+        <%= f.text_field :metric %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="medium-12 column">
+        <%= f.label :value %>
+        <%= f.text_field :value %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="medium-12 column">
+        <%= f.label :by_date %>
+        <%= f.date_select :by_date %>
+      </div>
+    </div> 
+    <div class="row">
+      <div class="medium-12 column">
+        <%= f.label :date_entered %>
+        <%= f.date_select :date_entered %>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit :class=>'button secondary'%>
+    </div>
+  </form>
 <% end %>
