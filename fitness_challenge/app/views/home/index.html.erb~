@@ -12,7 +12,7 @@
 	<br/>
     <%= link_to "Your Goals", goals_path %>
 	<br/>
-    <%= link_to "Your Progress", goals_path %>
+    <%= link_to "Your Goals", goals_path %>
 	<br/>
   <% end %>
 </div>
