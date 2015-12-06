@@ -11,19 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151205085330) do
+ActiveRecord::Schema.define(version: 20151206034719) do
 
   create_table "entries", force: :cascade do |t|
     t.integer  "user_id"
     t.date     "date"
-    t.float    "measurements"
     t.float    "weight"
     t.integer  "calories"
     t.string   "workout"
     t.integer  "energy"
     t.float    "sleep"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float    "chest"
+    t.float    "waist"
+    t.float    "bicep"
+    t.float    "thigh"
+    t.float    "calf"
   end
 
   create_table "goals", force: :cascade do |t|
