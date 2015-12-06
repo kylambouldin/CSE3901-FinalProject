@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get 'entries' => 'entries#show'
   get 'goals' => 'goals#show'
- 
+  get 'progress' => 'entries#progress' 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

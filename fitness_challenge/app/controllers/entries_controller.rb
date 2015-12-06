@@ -12,6 +12,10 @@ class EntriesController < ApplicationController
   def show
   end
 
+  # GET /entries/graph
+  def progress 
+  end
+
   # GET /entries/new
   def new
     @entry = Entry.new
