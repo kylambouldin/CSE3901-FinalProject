@@ -29,27 +29,27 @@
      <legend>Measurements</legend>  
      <div class="row">
        <div class="medium-2 columns">
-         <label><%= f.label :chest %>
+         <label><%= f.label :chest %>(inches)
            <%= f.number_field :chest, :step => 0.25 %>
          </label>
        </div>
        <div class="medium-2 columns">
-         <label><%= f.label :waist %>
+         <label><%= f.label :waist %>(inches)
            <%= f.number_field :waist, :step => 0.25 %>
          </label>
        </div>
        <div class="medium-2 columns">
-         <label><%= f.label :bicep %>
+         <label><%= f.label :bicep %>(inches)
            <%= f.number_field :bicep, :step => 0.25 %>
          </label>
        </div>
        <div class="medium-2 columns">
-         <label><%= f.label :thigh %>
+         <label><%= f.label :thigh %>(inches)
            <%= f.number_field :thigh, :step => 0.25 %>
          </label>
        </div>
        <div class="medium-2 columns end">
-         <label><%= f.label :calf %>
+         <label><%= f.label :calf %>(inches)
            <%= f.number_field :calf, :step => 0.25 %>
          </label>
        </div>
@@ -58,23 +58,23 @@
        <legend>Macros</legend>
        <div class="row">
          <div class="medium-3 columns">
-           <label><%= f.label :calories %>
+           <label><%= f.label :calories %>(total)
              <%= f.number_field :calories %>
            </label>
          </div>
          <div class="medium-3 columns">
-           <label><%= f.label :protein %>
-             <%= f.number_field :protein %>
+           <label><%= f.label :protein %>(grams)
+             <%= f.number_field :protein, :step => 0.01 %>
            </label>
          </div>
          <div class="medium-3 columns">
-           <label><%= f.label :carbs %>
-             <%= f.number_field :carbs %>
+           <label><%= f.label :carbs %>(grams)
+             <%= f.number_field :carbs, :step => 0.01 %>
            </label>
          </div>
          <div class="medium-3 columns">
-           <label><%= f.label :fats %>
-             <%= f.number_field :fats %>
+           <label><%= f.label :fats %>(grams)
+             <%= f.number_field :fats, :step => 0.01 %>
            </label>
          </div>
        </div>
