@@ -47,13 +47,13 @@
 </table>
 <br>
 
-
-<%= month_calendar events: current_user.entries do |date, entries|%>
+<%= month_calendar events: (current_user.entries + current_user.goals) do |date, events|%>
   <%= date.mday %>
-  <% entries.each do |entry| %>
-    <div> <%= link_to entry.calories, entry %> </div>
+  <% events.each do |event| %>
+    <% if event.is_a?(Entry) %>
+      <div> <%= link_to 'View Entry', event %> </div>
+    <% elsif event.is_a?(Goal) %>
+      <div> <%= link_to 'View Goal', event %> </div>
+    <% end %>
   <% end %>
 <% end %>
-
-
-

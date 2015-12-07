@@ -30,11 +30,44 @@ body {
   padding: 50px 0px;
 }
 
+h1 {
+  vertical-align: middle;
+}
+
 #home-signup-button {
   color: white;
 }
 
 
+/* Calendar */
+.simple-calendar {
+  padding: 50px;
+}
+
+.simple-calendar table {
+  width: 90%;
+  margin: auto;
+}
+
+.simple-calendar .day {
+  width: 14.3%;
+  height: 100px;
+  padding: 5px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.today {
+  background: #FFFFC0;
+}
+
+.prev-month {
+  background: #DDD;
+}
+
+.next-month {
+  background: #DDD;
+}  
 /* Forms (Signup, Login) */
 
 .custom-form {
