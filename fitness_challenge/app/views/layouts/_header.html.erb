@@ -9,11 +9,10 @@
     <!-- Right Nav Section -->
     <ul class="right">
       <% if user_signed_in? %>
-        <li><%= link_to "Home", home_path, :class=>'navbar-link' %></li>
-	<li><%= link_to "Entries", entries_path, :class=>'navbar-link' %></li> 
-	<li><%= link_to "Goals", goals_path, :class=>'navbar-link' %></li>
-	<li><%= link_to "Progress", progress_path, :class=>'navbar-link' %></li>
-	<li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
+    	<li><%= link_to "Entries", entries_path, :class=>'navbar-link' %></li> 
+	    <li><%= link_to "Goals", goals_path, :class=>'navbar-link' %></li>
+	    <li><%= link_to "Progress", progress_path, :class=>'navbar-link' %></li>
+	    <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %></li>
       <% else %>
         <li><%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %></li>
         <li><%= link_to "Log in", new_user_session_path, :class => 'navbar-link' %></li>

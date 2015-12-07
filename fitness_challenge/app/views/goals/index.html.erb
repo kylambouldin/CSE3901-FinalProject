@@ -2,7 +2,9 @@
 
 <h1>Your Goals</h1>
 
-<%= link_to 'Add New Goal', new_goal_path, :class=>'button secondary' %>
+<div class="button_center">
+  <%= link_to 'New Goal', new_goal_path, :class=>'button secondary' %>
+</div>
 
 <div class="row">
   <% current_user.goals.each do |goal| %>
