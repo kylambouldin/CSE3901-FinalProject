@@ -16,6 +16,9 @@
       <th>Calf</th>
       <th>Weight</th>
       <th>Calories</th>
+      <th>Protein</th>
+      <th>Carbs</th>
+      <th>Fats</th>
       <th>Workout</th>
       <th>Energy</th>
       <th>Sleep</th>
@@ -35,6 +38,9 @@
         <td><%= entry.calf %></td>
         <td><%= entry.weight %></td>
         <td><%= entry.calories %></td>
+        <td><%= entry.protein %></td>
+        <td><%= entry.carbs %></td>
+        <td><%= entry.fats %></td>
         <td><%= entry.workout %></td>
         <td><%= entry.energy %></td>
         <td><%= entry.sleep %></td>
@@ -50,8 +56,8 @@
 
 <%= month_calendar events: current_user.entries do |date, entries|%>
   <%= date.mday %>
-  <%= entries.each do |entry| %>
-    <div><%= link_to entry.calories, entry %></div>
+  <% entries.each do |entry| %>
+    <div> <%= link_to entry.calories, entry %> </div>
   <% end %>
 <% end %>
 

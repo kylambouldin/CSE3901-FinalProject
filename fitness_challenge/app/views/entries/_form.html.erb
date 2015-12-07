@@ -34,7 +34,7 @@
          </label>
        </div>
        <div class="medium-2 columns">
-         <label><%= f.label :wasit %>
+         <label><%= f.label :waist %>
            <%= f.number_field :waist, :step => 0.25 %>
          </label>
        </div>
@@ -57,9 +57,24 @@
      <fieldset>
        <legend>Macros</legend>
        <div class="row">
-         <div class="medium-4 columns">
+         <div class="medium-3 columns">
            <label><%= f.label :calories %>
              <%= f.number_field :calories %>
+           </label>
+         </div>
+         <div class="medium-3 columns">
+           <label><%= f.label :protein %>
+             <%= f.number_field :protein %>
+           </label>
+         </div>
+         <div class="medium-3 columns">
+           <label><%= f.label :carbs %>
+             <%= f.number_field :carbs %>
+           </label>
+         </div>
+         <div class="medium-3 columns">
+           <label><%= f.label :fats %>
+             <%= f.number_field :fats %>
            </label>
          </div>
        </div>
