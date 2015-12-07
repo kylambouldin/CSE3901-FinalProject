@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Your Progress df <h1>
+
+<div class="row">
+  <div class="col-xs-6">
+    <h3>Calories By Day</h3>
+    <%= line_chart @calories.group_by_day(:visited_at, format: "%B %d, %Y").count, discrete: true %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">
+    <h3>Weight By Day</h3>
+    <%= line_chart @weight.group_by_day(:visited_at, format: "%B %d, %Y").count, discrete: true %>
+  </div>
+
+</div>
+
+
+<%= link_to 'Edit', edit_goal_path(@goal) %> |
+<%= link_to 'Back', goals_path %>
