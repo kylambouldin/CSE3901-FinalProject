@@ -31,11 +31,16 @@ body {
 }
 
 h1 {
-  vertical-align: middle;
+  text-align: center;
 }
 
 #home-signup-button {
   color: white;
+}
+
+.secondary {
+  margin: 0 auto;
+  width: 150px;
 }
 
 
@@ -67,7 +72,14 @@ h1 {
 
 .next-month {
   background: #DDD;
-}  
+} 
+
+.entry_list {
+  margin: 50px;
+  width: 90%;
+  margin: auto;
+} 
+
 /* Forms (Signup, Login) */
 
 .custom-form {
@@ -93,4 +105,10 @@ h1 {
 /* GOAL Page */
 .goal {
   border: 2px solid black;
+  margin: 25px;
+  background: #F9F9F9;
+}
+
+.center_link {
+  text-align: center;
 }

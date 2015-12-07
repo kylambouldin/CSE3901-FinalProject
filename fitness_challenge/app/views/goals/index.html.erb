@@ -4,15 +4,13 @@
 
 <%= link_to 'Add New Goal', new_goal_path, :class=>'button secondary' %>
 
-
 <div class="row">
   <% current_user.goals.each do |goal| %>
     <div class="medium-3 columns  goal end">
         <h3><%= goal.metric %></h3>
-        <p><%= goal.value %> inches by <%= goal.by_date %></p>
-        <p><%= link_to 'View', goal %></p>
-        <p><%= link_to 'Edit', edit_goal_path(goal) %></>
-        <p><%= link_to 'Delete', goal, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p>Goal:  <%= goal.value %> inches</p>
+        <p>By: <%= goal.by_date.strftime("%m/%d/%Y") %></p>
+        <p class="center_link"><%= link_to 'View Goal', goal %></p>
     </div>
   <% end %>
 </div>

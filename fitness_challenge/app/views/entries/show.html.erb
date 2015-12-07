@@ -77,4 +77,5 @@
 </p>
 
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
-<%= link_to 'Back', entries_path %>
+<%= link_to 'Back', entries_path %> |
+<%= link_to 'Delete', entry, method: :delete, data: { confirm: 'Are you sure?' } %>
