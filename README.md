@@ -16,4 +16,5 @@
 ## Matt LeDonne
 
 ## Evan Clark
-* Linked user to their entries/goals
+* Linked users to their entries/goals
+* Added calendar functionality
