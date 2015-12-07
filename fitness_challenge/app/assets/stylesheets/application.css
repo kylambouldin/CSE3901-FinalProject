@@ -43,7 +43,38 @@ h1 {
   width: 150px;
 }
 
+/* Show entry/goal */
+.display_box {
+  background: #F9F9F9;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 30px;
+}
 
+.display_box strong {
+  margin-left: 10px;
+}
+
+h3.display_title {
+  text-align: center;
+  padding: 10px;
+}
+
+.display_box p {
+  font-size: 12pt;
+}
+
+.display_link {
+  text-align: center;
+  padding: 10px;
+}
+
+.goal_title {
+  text-align: center;
+}
 /* Calendar */
 .simple-calendar {
   padding: 50px;

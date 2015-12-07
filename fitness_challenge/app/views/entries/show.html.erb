@@ -1,43 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @entry.user_id %>
-</p>
+<div class="display_box">
+<h3 class="display_title">
+  <%= @entry.date.strftime("%m/%d/%Y") %>
+</h3>
 
 <p>
-  <strong>Date:</strong>
-  <%= @entry.date %>
-</p>
-
-<p>
-  <strong>Chest (inches):</strong>
+  <strong>Chest (in):</strong>
   <%= @entry.chest %>
 </p>
 
 <p>
-  <strong>Waist (inches):</strong>
+  <strong>Waist (in):</strong>
   <%= @entry.waist %>
 </p>
 
 <p>
-  <strong>Bicep (inches):</strong>
+  <strong>Bicep (in):</strong>
   <%= @entry.bicep %>
 </p>
 
 <p>
-  <strong>Thigh (inches):</strong>
+  <strong>Thigh (in):</strong>
   <%= @entry.thigh %>
 </p>
 
 <p>
-  <strong>Calf (inches):</strong>
+  <strong>Calf (in):</strong>
   <%= @entry.calf %>
 </p>
 
 
 <p>
-  <strong>Weight (lbs.):</strong>
+  <strong>Weight (lbs):</strong>
   <%= @entry.weight %>
 </p>
 
@@ -67,15 +62,18 @@
 </p>
 
 <p>
-  <strong>Energy (on scale of 1-10):</strong>
+  <strong>Energy (1-10):</strong>
   <%= @entry.energy %>
 </p>
 
 <p>
-  <strong>Sleep (hrs.):</strong>
+  <strong>Sleep (hrs):</strong>
   <%= @entry.sleep %>
 </p>
 
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<div class="display_link">
 <%= link_to 'Back', entries_path %> |
-<%= link_to 'Delete', entry, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Edit', edit_entry_path(@entry) %> |
+<%= link_to 'Delete', @entry, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+</div>
