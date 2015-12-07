@@ -1,14 +1,15 @@
 # Final Project - BitsPlease
 
 
-* Overall Manager:
-* Implementation Manager:
-* Documentation Manager:
-* Testing Manager:
+* Overall Manager: Kyla Bouldin
+* Implementation Manager: Evan Clark
+* Documentation Manager: Pallavi Kalva
+* Testing Manager: Matt LeDonne
 
 ## Kyla Bouldin
 * Set up project & home page
 * Used Devise gem for signup/login
+* Formatted forms
 
 ## Pallavi Kalva
 
