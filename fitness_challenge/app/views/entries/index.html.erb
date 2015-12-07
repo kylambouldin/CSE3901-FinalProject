@@ -32,10 +32,10 @@
         <td><%= entry.user_id %></td>
         <td><%= entry.date %></td>
         <td><%= entry.chest %></td>
-	<td><%= entry.waist %></td>
-	<td><%= entry.bicep %></td>
-	<td><%= entry.thigh %></td>
-	<td><%= entry.calf %></td>
+        <td><%= entry.waist %></td>
+        <td><%= entry.bicep %></td>
+        <td><%= entry.thigh %></td>
+        <td><%= entry.calf %></td>
         <td><%= entry.weight %></td>
         <td><%= entry.calories %></td>
         <td><%= entry.protein %></td>
@@ -52,3 +52,14 @@
   </tbody>
 </table>
 <br>
+
+
+<%= month_calendar events: current_user.entries do |date, entries|%>
+  <%= date.mday %>
+  <% entries.each do |entry| %>
+    <div> <%= link_to entry.calories, entry %> </div>
+  <% end %>
+<% end %>
+
+
+
