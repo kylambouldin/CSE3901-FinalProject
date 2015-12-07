@@ -18,3 +18,4 @@
 ## Evan Clark
 * Linked users to their entries/goals
 * Added calendar functionality
+* Formatting
