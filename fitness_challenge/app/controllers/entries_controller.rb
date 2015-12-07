@@ -74,6 +74,6 @@ class EntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params.require(:entry).permit(:user_id, :date, :chest, :waist, :bicep, :thigh, :calf, :weight, :calories, :workout, :energy, :sleep)
+      params.require(:entry).permit(:user_id, :date, :chest, :waist, :bicep, :thigh, :calf, :weight, :calories, :protein, :carbs, :fats, :workout, :energy, :sleep)
     end
 end
