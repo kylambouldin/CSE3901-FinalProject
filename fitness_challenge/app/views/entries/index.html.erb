@@ -50,8 +50,8 @@
 
 <%= month_calendar events: current_user.entries do |date, entries|%>
   <%= date.mday %>
-  <%= entries.each do |entry| %>
-    <div><%= link_to entry.calories, entry %></div>
+  <% entries.each do |entry| %>
+    <div> <%= link_to entry.calories, entry %> </div>
   <% end %>
 <% end %>
 
