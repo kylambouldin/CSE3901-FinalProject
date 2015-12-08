@@ -21,40 +21,40 @@ body {
   background: rgb(164,164,193);
 }
 
+h1, h2{
+  text-align: center;
+}
+
+.button_center {
+  text-align: center;
+  margin: auto;
+} 
+
+/* HOME page */
 .homepage {
   width: 100%;
   height: 100%;
   background-image:url(http://hdwallpapersrocks.com/wp-content/uploads/2013/09/Morning-exercise-by-hot-girl-HD-wallpaper.jpg);
-  background-size: 100%;
+  background-size: 120%;
   background-repeat: no-repeat;
 }
 
-.button_center {
-  margin: auto;
-  text-align: center;
-}
-
-/* HOME PAGE CSS */
-.homepage, .login-page h1 {
-  text-align: center;
-}
-
-.homepage .panel {
+.into-homepage .panel {
   padding: 50px 0px;
 }
 
-h1 {
-  text-align: center;
-}
-
-#home-signup-button {
+#intro-signup-button {
   color: white;
 }
 
-.secondary {
-  margin: 0 auto;
-  width: 150px;
+.user-homepage {
+  padding-top: 25px;
 }
+.user-homepage .button-group {
+  text-align: center;
+}
+
+/* ENTRY PAGE */
 
 /* Show entry/goal */
 .display_box {
@@ -88,9 +88,9 @@ h3.display_title {
 .goal_title {
   text-align: center;
 }
+
 /* Calendar */
 .simple-calendar {
-  padding: 50px;
 }
 
 .simple-calendar table {
@@ -116,6 +116,10 @@ h3.display_title {
 
 .next-month {
   background: #DDD;
+}
+
+.all-entries {
+  text-align: center;
 } 
 
 .entry_list {
@@ -127,10 +131,13 @@ h3.display_title {
 /* Forms (Signup, Login) */
 
 .custom-form {
-  width: 500px;
+  width: 60%;
   margin: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
   padding: 0% 5%;
-  border: 2px solid black;
+  border: 1px solid black;
+  background-color: white;
 }
 
 .custom-form h2 {
@@ -144,6 +151,13 @@ h3.display_title {
 #entry-form {
   width: 750px;
 }
+
+#login-link, #signup-link {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 11pt;
+}
+
 
 
 /* GOAL Page */

@@ -1,0 +1,10 @@
+class ChangeDateFormatInGoals < ActiveRecord::Migration
+  def up
+    change_column :goals, :by_date, :date
+    change_column :goals, :date_entered, :date
+  end
+  def down
+    change_column :goals, :by_date, :datetime
+    change_column :goals, :date_entered, :datetime
+  end
+end

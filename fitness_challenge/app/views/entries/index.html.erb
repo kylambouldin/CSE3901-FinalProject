@@ -8,8 +8,6 @@
   <%= link_to 'New Entry', new_entry_path, :class=>'button secondary' %>
 </div>
 
-<br/>
-
 <%= month_calendar events: (current_user.entries + current_user.goals) do |date, events|%>
   <%= date.mday %>
   <% events.each do |event| %>
@@ -23,6 +21,8 @@
 
 <br/>
 
+<div class="all-entries">
+<h3>All Entries</h3>
 <table class="entry_list">
   <thead>
     <tr>
@@ -67,3 +67,4 @@
   </tbody>
 </table>
 <br>
+</div>

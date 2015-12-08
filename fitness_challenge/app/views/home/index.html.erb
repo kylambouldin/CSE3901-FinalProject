@@ -1,12 +1,15 @@
 <div class="homepage">
-  <% if !user_signed_in? %>
-    <div class="panel">
-      <h1>Fitness Challenge Tracker by BitsPlease</h1>
-      <h2>Welcome to the best fitness challenge tracker ever!</h2>
-      <%= link_to "Sign Up Now!", new_user_registration_path, class: "button large round", id:"home-signup-button" %>
-    </div>
-  <% else %>
-    <h3>Welcome, <strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h3>
+  <div class="intro-homepage">
+    <% if !user_signed_in? %>
+      <div class="panel button_center">
+        <h1>Fitness Challenge Tracker by BitsPlease</h1>
+        <h2>Welcome to the best fitness challenge tracker ever!</h2>
+        <%= link_to "Sign Up Now!", new_user_registration_path, class: "button large round", id:"intro-signup-button" %>
+      </div>
+  </div>
+    <% else %>
+  <div class="user-homepage">
+    <h2>Welcome, <strong><%= current_user.first_name %> <%= current_user.last_name %></strong></h2>
     <br/>
     <ul class="button-group">
       <li><%= link_to "Your Entries", entries_path, class: "button large secondary" %></li>
@@ -14,4 +17,5 @@
       <li><%= link_to "Your Progress", progress_path, class: "button large secondary" %></li>
     </ul>
   <% end %>
+  </div>
 </div>

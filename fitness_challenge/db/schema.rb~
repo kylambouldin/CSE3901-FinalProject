@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151207005616) do
+ActiveRecord::Schema.define(version: 20151207002131) do
 
   create_table "entries", force: :cascade do |t|
     t.integer  "user_id"
@@ -28,15 +28,12 @@ ActiveRecord::Schema.define(version: 20151207005616) do
     t.float    "bicep"
     t.float    "thigh"
     t.float    "calf"
-    t.float    "protein"
-    t.float    "carbs"
-    t.float    "fats"
   end
 
   create_table "goals", force: :cascade do |t|
     t.string   "metric"
     t.float    "value"
-    t.date     "by_date"
+    t.datetime "by_date"
     t.date     "date_entered"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
