@@ -30,14 +30,13 @@
 			</label>
 	</div>
 
-
-		<div style="width:40% ;float:right">
+	<div style="width:40% ;float:right">
 		<label for = "canvas4">
 			Sleep over Time<br />
 			<div>
 				<canvas id="canvas4" height="200" width="200"></canvas>
 			</div>
-			</label>
+		</label>
 		</div>
 </span>
 
@@ -50,6 +49,7 @@ var calories=[];
 var sleep=[];
 var energy=[];
 
+//extracting needed data for graphs
 $(document).ready(function( $ ) {
   $.ajax({
             type: "GET",
@@ -84,7 +84,8 @@ $(document).ready(function( $ ) {
                		}
 
 
-               		var ctx = document.getElementById("canvas").getContext("2d");
+         //drawing the graphs on canvas
+        var ctx = document.getElementById("canvas").getContext("2d");
 		window.myLine = new Chart(ctx).Line(lineChartData, {
 			responsive: true
 		});
@@ -108,11 +109,12 @@ $(document).ready(function( $ ) {
                		
                }
             },
-            error: function (result) {
-
+            	error: function (result) {
             }
     });
 });	
+
+	//creating graphs
 		var lineChartData = {
 			
 			labels: date,
@@ -169,8 +171,6 @@ $(document).ready(function( $ ) {
 				
 			]
 		};
-
-
 
 			var lineChartData4 = {
 			
