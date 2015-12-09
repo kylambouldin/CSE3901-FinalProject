@@ -78,9 +78,8 @@ class EntriesController < ApplicationController
     end
 
 def yolo
-      respond_to do |format|
-      format.json {"hello"}
+#      respond_to do |format|
+ #     format.json {"hello"}
 end
 
-end
 end

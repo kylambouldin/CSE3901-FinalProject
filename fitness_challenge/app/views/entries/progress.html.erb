@@ -93,6 +93,7 @@ var calories=[];
 var sleep=[];
 var energy=[];
 var chest=[];
+var bicep=[];
 var waist=[];
 var thigh=[];
 var calf=[];
@@ -107,45 +108,61 @@ $(document).ready(function( $ ) {
             data: "{}", 
             success: function (received_data) {
             	
+		<% current_user.entries.each do |entry| %>
+                weight.push(<%= entry.weight %>)
+                calories.push(<%= entry.calories %>)
+                sleep.push(<%= entry.sleep %>)
+                energy.push(<%= entry.energy %>)
+                chest.push(<%= entry.chest %>)
+                bicep.push(<%= entry.bicep %>)
+                waist.push(<%= entry.waist %>)
+                thigh.push(<%= entry.thigh %>)
+                calf.push(<%= entry.calf %>)
+        <% end %>
+
+
                data=received_data;
                for(var i =0;i<received_data.length;i++)
                {
-               		if(received_data[i].date!=null)
+			if (received_data[i].user_id = <%= current_user.id %>){
+				console.log(received_data[i]);
+			if(received_data[i].date!=null)
                		{
                			date.push(received_data[i].date);              		
                		}
                		if(received_data[i].weight!=null)
                		{
-               			weight.push(received_data[i].weight);         		
+//               			weight.push(received_data[i].weight);         		
                		}
                		if(received_data[i].calories!=null)
                		{               			
-               			calories.push(received_data[i].calories);
+//               			calories.push(received_data[i].calories);
                		}
                		if(received_data[i].sleep!=null)
                		{
-               			sleep.push(received_data[i].sleep);
+//               			sleep.push(received_data[i].sleep);
                		}
                		if(received_data[i].energy!=null)
                		{	
-               			energy.push(received_data[i].energy);
+//               			energy.push(received_data[i].energy);
                		}
                		if(received_data[i].chest!=null)
                		{	
-               			chest.push(received_data[i].chest);
+//               			chest.push(received_data[i].chest);
                		}
                		if(received_data[i].waist!=null)
                		{	
-               			waist.push(received_data[i].waist);
+//               			waist.push(received_data[i].waist);
                		}
                		if(received_data[i].thigh!=null)
                		{	
-               			thigh.push(received_data[i].thigh);
+//               			thigh.push(received_data[i].thigh);
                		}
                		if(received_data[i].calf!=null)
                		{	
-               			calf.push(received_data[i].calf);
+//               			calf.push(received_data[i].calf);
                		}
+		}
 
 
 
