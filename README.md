@@ -12,6 +12,9 @@
 * Formatted forms
 
 ## Pallavi Kalva
+* Added graphs
+* Formatted
+* Comments
 
 ## Matt LeDonne
 
