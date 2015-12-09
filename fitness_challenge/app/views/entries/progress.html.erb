@@ -40,49 +40,6 @@
 		</div>
 </span>
 
-<span style = "width=100%">
-	
-	<div style="width:40% ;float:left">
-		<label for = "canvas5">
-				Chest over Time<br />
-			<div>
-				<canvas id="canvas5" height="200" width="200"></canvas>
-			</div>
-			</label>
-	</div>
-
-	<div style="width:40% ;float:right">
-		<label for = "canvas6">
-				Waist over Time<br />
-			<div>
-				<canvas id="canvas6" height="200" width="200"></canvas>
-			</div>
-			</label>
-	</div>
-
-</span>>
-
-<span style = "width=100%">
-	
-	<div style="width:40% ;float:left">
-		<label for = "canvas7">
-				Thigh over Time<br />
-			<div>
-				<canvas id="canvas7" height="200" width="200"></canvas>
-			</div>
-			</label>
-	</div>
-
-	<div style="width:40% ;float:right">
-		<label for = "canvas8">
-				Calf over Time<br />
-			<div>
-				<canvas id="canvas8" height="200" width="200"></canvas>
-			</div>
-			</label>
-	</div>
-
-</span>>
 
 
 <script type="text/javascript">
@@ -92,10 +49,7 @@ var date = [];
 var calories=[];
 var sleep=[];
 var energy=[];
-var chest=[];
-var waist=[];
-var thigh=[];
-var calf=[];
+
 
 //extracting needed data for graphs
 $(document).ready(function( $ ) {
@@ -130,24 +84,7 @@ $(document).ready(function( $ ) {
                		{	
                			energy.push(received_data[i].energy);
                		}
-               		if(received_data[i].chest!=null)
-               		{	
-               			chest.push(received_data[i].chest);
-               		}
-               		if(received_data[i].waist!=null)
-               		{	
-               			waist.push(received_data[i].waist);
-               		}
-               		if(received_data[i].thigh!=null)
-               		{	
-               			thigh.push(received_data[i].thigh);
-               		}
-               		if(received_data[i].calf!=null)
-               		{	
-               			calf.push(received_data[i].calf);
-               		}
-
-
+               		
 
          //drawing the graphs on canvas
         var ctx = document.getElementById("canvas").getContext("2d");
@@ -172,25 +109,7 @@ $(document).ready(function( $ ) {
 			responsive: true
 		});
 
-		var ctx5 = document.getElementById("canvas5").getContext("2d");
-		window.myLine5 = new Chart(ctx5).Line(lineChartData5, {
-			responsive: true
-		});
-
-		var ctx6 = document.getElementById("canvas6").getContext("2d");
-		window.myLine6 = new Chart(ctx6).Line(lineChartData6, {
-			responsive: true
-		});
-
-		var ctx7 = document.getElementById("canvas7").getContext("2d");
-		window.myLine7 = new Chart(ctx7).Line(lineChartData7, {
-			responsive: true
-		});
-
-		var ctx8 = document.getElementById("canvas8").getContext("2d");
-		window.myLine8 = new Chart(ctx8).Line(lineChartData8, {
-			responsive: true
-		});
+		
                		
                }
             },
@@ -276,80 +195,5 @@ $(document).ready(function( $ ) {
 
 		};
 
-		var lineChartData5 = {
-			
-			labels: date,
-			datasets : [
-				{
-					label: "My Fifth Dataset",
-					fillColor : "rgba(151,187,205,0.2)",
-					strokeColor : "rgba(151,187,205,1)",
-					pointColor : "rgba(151,187,205,1)",
-					pointStrokeColor : "#fff",
-					pointHighlightFill : "#fff",
-					pointHighlightStroke : "rgba(151,187,205,1)",
-					data : chest
-				}
-				
-			]
-
-		};
-
-		var lineChartData6 = {
-			
-			labels: date,
-			datasets : [
-				{
-					label: "My Sixth Dataset",
-					fillColor : "rgba(151,187,205,0.2)",
-					strokeColor : "rgba(151,187,205,1)",
-					pointColor : "rgba(151,187,205,1)",
-					pointStrokeColor : "#fff",
-					pointHighlightFill : "#fff",
-					pointHighlightStroke : "rgba(151,187,205,1)",
-					data : waist
-				}
-				
-			]
-
-		};
-
-		var lineChartData7 = {
-			
-			labels: date,
-			datasets : [
-				{
-					label: "My Sixth Dataset",
-					fillColor : "rgba(151,187,205,0.2)",
-					strokeColor : "rgba(151,187,205,1)",
-					pointColor : "rgba(151,187,205,1)",
-					pointStrokeColor : "#fff",
-					pointHighlightFill : "#fff",
-					pointHighlightStroke : "rgba(151,187,205,1)",
-					data : thigh
-				}
-				
-			]
-
-		};
-
-		var lineChartData8 = {
-			
-			labels: date,
-			datasets : [
-				{
-					label: "My Sixth Dataset",
-					fillColor : "rgba(151,187,205,0.2)",
-					strokeColor : "rgba(151,187,205,1)",
-					pointColor : "rgba(151,187,205,1)",
-					pointStrokeColor : "#fff",
-					pointHighlightFill : "#fff",
-					pointHighlightStroke : "rgba(151,187,205,1)",
-					data : calf
-				}
-				
-			]
-
-		};
 
 </script> 
