@@ -1,1 +1,194 @@
 <h1>Your Progress</h1>
+
+<span style ="width:100%">
+		<div  style="width:40%; float:left">
+		<label for = "canvas">
+		Weight over Time<br />
+			<div>
+				<canvas id="canvas" height="200" width="200"></canvas>
+			</div>
+			</label>
+		</div>
+
+		<div style="width:40% ;float:right">
+		<label for = "canvas2">
+		Calories over Time<br />
+			<div>
+				<canvas id="canvas2" height="200" width="200"></canvas>
+			</div>
+			</label>
+		</div>	
+</span>
+
+<span style = "width=100%">
+	<div style="width:40% ;float:left">
+		<label for = "canvas3">
+				Energy over Time<br />
+			<div>
+				<canvas id="canvas3" height="200" width="200"></canvas>
+			</div>
+			</label>
+	</div>
+
+
+		<div style="width:40% ;float:right">
+		<label for = "canvas4">
+			Sleep over Time<br />
+			<div>
+				<canvas id="canvas4" height="200" width="200"></canvas>
+			</div>
+			</label>
+		</div>
+</span>
+
+
+<script type="text/javascript">
+var data;	
+var weight=[];
+var date = [];
+var calories=[];
+var sleep=[];
+var energy=[];
+
+$(document).ready(function( $ ) {
+  $.ajax({
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            url: '/entries#yolo',
+            dataType: 'json',
+            data: "{}", 
+            success: function (received_data) {
+            	
+               data=received_data;
+               for(var i =0;i<received_data.length;i++)
+               {
+               		if(received_data[i].date!=null)
+               		{
+               			date.push(received_data[i].date);              		
+               		}
+               		if(received_data[i].weight!=null)
+               		{
+               			weight.push(received_data[i].weight);         		
+               		}
+               		if(received_data[i].calories!=null)
+               		{               			
+               			calories.push(received_data[i].calories);
+               		}
+               		if(received_data[i].sleep!=null)
+               		{
+               			sleep.push(received_data[i].sleep);
+               		}
+               		if(received_data[i].energy!=null)
+               		{	
+               			energy.push(received_data[i].energy);
+               		}
+
+
+               		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myLine = new Chart(ctx).Line(lineChartData, {
+			responsive: true
+		});
+
+		var ctx2 = document.getElementById("canvas2").getContext("2d");
+		window.myLine2 = new Chart(ctx2).Line(lineChartData2, {
+			responsive: true
+		});
+
+
+		var ctx3 = document.getElementById("canvas3").getContext("2d");
+		window.myLine3 = new Chart(ctx3).Line(lineChartData3, {
+			responsive: true
+		});
+
+
+		var ctx4 = document.getElementById("canvas4").getContext("2d");
+		window.myLine4 = new Chart(ctx4).Line(lineChartData4, {
+			responsive: true
+		});
+               		
+               }
+            },
+            error: function (result) {
+
+            }
+    });
+});	
+		var lineChartData = {
+			
+			labels: date,
+			datasets : [
+				{
+					label: "My First Dataset",
+					fillColor : "rgba(220,220,220,0.2)",
+					strokeColor : "rgba(220,220,220,1)",
+					pointColor : "rgba(220,220,220,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(220,220,220,1)",
+					
+					data: weight
+				}
+				
+			]
+
+		};
+
+		var lineChartData2 = {
+			
+			labels: date,
+			datasets : [
+				{
+					label: "My Second Dataset",
+					fillColor : "rgba(151,187,205,0.2)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#8d002b",
+					pointHighlightStroke : "rgba(151,187,205,1)",
+					data : calories
+				}
+				
+			]
+
+		};
+
+			var lineChartData3 = {
+			
+			labels: date,
+			datasets : [
+				{
+					label: "My Third Dataset",
+					fillColor : "rgba(220,220,220,0.2)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#8d002b",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(151,187,205,1)",
+					data : sleep
+				}
+				
+			]
+		};
+
+
+
+			var lineChartData4 = {
+			
+			labels: date,
+			datasets : [
+				{
+					label: "My Fourth Dataset",
+					fillColor : "rgba(151,187,205,0.2)",
+					strokeColor : "rgba(151,187,205,1)",
+					pointColor : "rgba(151,187,205,1)",
+					pointStrokeColor : "#fff",
+					pointHighlightFill : "#fff",
+					pointHighlightStroke : "rgba(151,187,205,1)",
+					data : energy
+				}
+				
+			]
+
+		};
+
+</script> 

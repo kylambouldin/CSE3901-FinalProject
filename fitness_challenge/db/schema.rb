@@ -37,9 +37,8 @@ ActiveRecord::Schema.define(version: 20151207005616) do
     t.string   "metric"
     t.float    "value"
     t.date     "by_date"
-    t.date     "date_entered"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "user_id"
   end
 

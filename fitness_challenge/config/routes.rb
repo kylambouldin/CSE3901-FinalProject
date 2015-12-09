@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destory'
-
+  get 'entries1' => 'entries#yolo'
   get 'entries' => 'entries#show'
   get 'goals' => 'goals#show'
   get 'progress' => 'entries#progress' 

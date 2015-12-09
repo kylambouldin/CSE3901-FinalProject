@@ -9,6 +9,7 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
+    @entries = Entry.all
   end
 
   # GET /entries/graph
@@ -75,4 +76,11 @@ class EntriesController < ApplicationController
     def entry_params
       params.require(:entry).permit(:user_id, :date, :chest, :waist, :bicep, :thigh, :calf, :weight, :calories, :protein, :carbs, :fats, :workout, :energy, :sleep)
     end
+
+def yolo
+      respond_to do |format|
+      format.json {"hello"}
+end
+
+end
 end

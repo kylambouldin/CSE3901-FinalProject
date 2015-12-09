@@ -16,4 +16,6 @@
 //= require turbolinks
 //= require_tree .
 
+require Chart.js;
+
 $(function(){ $(document).foundation(); });
