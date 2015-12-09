@@ -7,9 +7,9 @@
 * Testing Manager: Matt LeDonne
 
 ## Kyla Bouldin
-* Set up project & home page
+* Set up project, home page, powerpoint
 * Used Devise gem for signup/login
-* Formatted forms
+* Formatted forms and graphs
 
 ## Pallavi Kalva
 * Added graphs
